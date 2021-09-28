@@ -6,8 +6,8 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "test": "jest --env=jsdom",
-    "test-once": "jest"
+    "test": "jest --watch --env=jsdom",
+    "test-once": "jest --env=jsdom"
   },
   "author": "Israel Antezana R.",
   "license": "ISC",
