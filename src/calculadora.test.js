@@ -14,25 +14,18 @@ describe("Calculadora", () => {
     //,
     //{ runScripts: "dangerously" }
     //);
-    require("./App.js");
+    require("./index");
 
-    const firstInput = document.getElementById("first-number");
-    const secondInput = document.getElementById("second-number");
-    const form = document.getElementById("sumar-form");
-    const formSubmit = document.getElementById("form-submit");
-    const resultadoDiv = document.getElementById("resultado-div");
+    const firstInput = document.querySelector("#first-number");
+    const secondInput = document.querySelector("#second-number");
+    const formSubmit = document.querySelector("#form-submit");
+    const resultadoDiv = document.querySelector("#resultado-div");
 
     firstInput.value = 2;
     secondInput.value = 3;
 
-    //const handleSubmit = jest.fn().mockImplementation((e) => e.preventDefault()); // gets rid of console error
-    //render(<Form onSubmit={handleSubmit} />);
-
-    // fireEvent.click(screen.getByRole("button"));
-    //const onSubmit = jest.fn(e => e.preventDefault());
-
     formSubmit.click();
 
-    expect(resultadoDiv.innerHTML).toEqual("");
+    expect(resultadoDiv.innerHTML).toEqual("5");
   });
 });
