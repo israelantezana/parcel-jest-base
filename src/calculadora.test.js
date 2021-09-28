@@ -1,19 +1,15 @@
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
+import fs from "fs";
+import path from "path";
 
 describe("Calculadora", () => {
   it("devuelve la suma de los dos numeros", () => {
-    //const dom = new JSDOM(
-    document.body.innerHTML = `
-                             <form id="sumar-form"/>                    
-                                <input id="first-number" />   
-                                <input id="second-number" />   
-                                <input type="submit" id="form-submit" value="Sumar" />
-                            </form>
-                            <div id="resultado-div"></div>`;
-    //,
-    //{ runScripts: "dangerously" }
-    //);
+    document.body.innerHTML = fs.readFileSync(
+      path.resolve(__dirname, "../index.html"),
+      "utf8"
+    );
+
     require("./index");
 
     const firstInput = document.querySelector("#first-number");
