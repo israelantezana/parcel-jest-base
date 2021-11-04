@@ -7,7 +7,7 @@
     "start": "parcel gestorTareas.html",
     "build": "parcel build gestorTareas.html",
     "test": "jest --watch --env='jsdom'",
-    "test-once": "jest"
+    "test-once": "jest --env='jsdom'"
   },
   "author": "Israel Antezana R.",
   "license": "ISC",
