@@ -4,9 +4,9 @@
   "description": "",
   "default": "index.html",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html",
-    "test": "jest --watch",
+    "start": "parcel gestorTareas.html",
+    "build": "parcel build gestorTareas.html",
+    "test": "jest --watch --env='jsdom'",
     "test-once": "jest"
   },
   "author": "Israel Antezana R.",
