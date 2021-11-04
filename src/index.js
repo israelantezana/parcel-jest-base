@@ -11,5 +11,6 @@ form.addEventListener("submit", (event) => {
   const firstNumber = Number.parseInt(first.value);
   const secondNumber = Number.parseInt(second.value);
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  div.innerHTML =
+    "<div> La suma es:" + sumar(firstNumber, secondNumber) + "<div>";
 });
