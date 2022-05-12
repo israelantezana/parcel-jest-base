@@ -1,0 +1,9 @@
+Como estudiante UCB
+Quiero poder ver que letras coinciden de  mi intento
+Para poder adivinar la palabra
+
+Criterios
+- Deberia poder ver un mensaje con las letras de la palabra que acertó 
+- No ver ningun mensaje si no tiene letras que coincide
+..
+...etc
