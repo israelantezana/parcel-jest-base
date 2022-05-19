@@ -1,15 +1,14 @@
 import sumar from "./sumador";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+const palabra = document.querySelector("#palabra-adivinar");
+const formAdivinar = document.querySelector("#adivinar-form");
+const botonAdivinar = document.querySelector("#boton-adivinar");
 const div = document.querySelector("#resultado-div");
 
-form.addEventListener("submit", (event) => {
+formAdivinar.addEventListener("submit", (event) => {
   event.preventDefault();
-
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
-
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  const wordle = new Wordle();
+  wordle.palabraSecreta("casas");
+  const letrasCoincidentes = wordle.obtenerLetrasCoincidentes(palabra.value());
+  div.innerHTML = "Letras: " + letrasCoincidentes;
 });
