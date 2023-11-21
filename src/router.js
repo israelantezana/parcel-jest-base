@@ -5,9 +5,10 @@ import CalculadoraView from "../views/CalculadoraView";
 import SaludadorView from "../views/SaludadorView";
 
 const route = (event) => {
+  //Np se ven necesarios:
   //event = event || window.event;
-  event.preventDefault();
-  window.history.pushState({}, "", event.target.href);
+  //event.preventDefault();
+  //window.history.pushState({}, "", event.target.href);
   handleLocation();
 };
 
@@ -24,6 +25,18 @@ const handleLocation = async () => {
   const view = routes[path] || routes[404];
   const html = view.render();
   document.getElementById("main-page").innerHTML = html;
+
+  //solucion fea, por que import en parcel no acepta que se le envie la ruta como variable/paramentro
+  try {
+    if (path == "/calculadora") {
+      await import("./presenterSumador.js");
+    }
+    if (path == "/saludador") {
+      await import("./presenterSaludador.js");
+    }
+  } catch (error) {
+    console.error("Error al cargar el presentador del Sumador:", error);
+  }
 };
 
 window.onpopstate = handleLocation;

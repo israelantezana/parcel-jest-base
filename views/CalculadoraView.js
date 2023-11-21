@@ -1,6 +1,6 @@
 export default class CalculadoraView {
   presenterPath() {
-    return "src/presenter.js";
+    return `./presenterSumador.js`;
   }
 
   render() {
